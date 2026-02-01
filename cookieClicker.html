@@ -28,7 +28,7 @@ cookieBtn.addEventListener("click", function() {
   clickCount++; // increment counter
   counterDisplay.textContent = `${clickCount} cookies clicked`; // update display
 
-  // NTS: Check milestones and show messages
+// NTS: Check milestones and show messages
   if (clickCount === 10) {
     messageDisplay.textContent = "You're off to a sweet start!";
     document.body.style.backgroundColor = "#ffe4e1"; // light pink for milestone
@@ -36,7 +36,7 @@ cookieBtn.addEventListener("click", function() {
     messageDisplay.textContent = "Snack time or keep clicking?";
     document.body.style.backgroundColor = "#fafad2"; // light yellow
   } else if (clickCount === 50) {
-    messageDisplay.textContent = "Galactic clicker! Don't stop now!";
+    messageDisplay.textContent = "Sweets are awaiting! Don't stop now!";
     document.body.style.backgroundColor = "#e0ffff"; // light cyan
   } else if (clickCount === 100) {
     messageDisplay.textContent = "Cookie Champion! Take a cosmic break.";
