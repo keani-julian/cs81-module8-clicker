@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <title>Galaxy Cookie Clicker</title>
 </head>
 <body style="text-align: center; font-family: sans-serif; background-color: #fff0f5; padding-top: 100px;">
@@ -12,7 +13,37 @@
   <div id="counter" style="margin-top: 20px; font-size: 1.5rem;">0 cookies clicked</div>
   <!-- Display milestone messages -->
   <div id="message" style="margin-top: 20px; font-size: 1.25rem; color: #333;"></div>
+  
   <script>
+// NTS: Elements
+const cookieBtn = document.getElementById("cookieBtn"); // button
+const counterDisplay = document.getElementById("counter"); // counter div
+const messageDisplay = document.getElementById("message"); // message div
+
+// NTS: Initialize counter variable
+let clickCount = 0;
+
+// NTS: Add click event listener
+cookieBtn.addEventListener("click", function() {
+  clickCount++; // increment counter
+  counterDisplay.textContent = `${clickCount} cookies clicked`; // update display
+
+  // NTS: Check milestones and show messages
+  if (clickCount === 10) {
+    messageDisplay.textContent = "You're off to a sweet start!";
+    document.body.style.backgroundColor = "#ffe4e1"; // light pink for milestone
+  } else if (clickCount === 25) {
+    messageDisplay.textContent = "Snack time or keep clicking?";
+    document.body.style.backgroundColor = "#fafad2"; // light yellow
+  } else if (clickCount === 50) {
+    messageDisplay.textContent = "Galactic clicker! Don't stop now!";
+    document.body.style.backgroundColor = "#e0ffff"; // light cyan
+  } else if (clickCount === 100) {
+    messageDisplay.textContent = "Cookie Champion! Take a cosmic break.";
+    document.body.style.backgroundColor = "#dda0dd"; // light purple
+  }
+});
+  </script>
 
 </body>
 </html>
